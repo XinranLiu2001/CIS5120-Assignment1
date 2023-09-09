@@ -1,0 +1,728 @@
+/*
+icon reference: 
+    magnifying glass icon (search)
+        - https://www.figma.com/file/w2jC5vsRzwUaMxm3sPspso/Superdao-%E2%80%93-Icons-library-(Community)?type=design&node-id=1942-3846&mode=design&t=mwByQVHPm93CeyhA-0
+    weather icon
+        - https://www.figma.com/file/vUQGNrRtGYv4nzZXuJQPyY/Weather-Icons-Pack-v1.1-(Community)?type=design&node-id=2-831&mode=design&t=RgAHcGJ2PZgjfsfu-0
+    arrow
+        - https://www.figma.com/file/KMKJtQLv7Spl988tWBDGP0/Iconix-by-Rijal-(Community)?type=design&node-id=2-379&mode=design&t=dmpleYCMMzgMZ5aj-0
+    clothes and other icons recommendations
+        - https://www.figma.com/file/qIvjTRwZ5JW7cgYzpQ5eJu/Icon-Pack---Free-Icons-Set-(Community)?type=design&node-id=2-2174&mode=design&t=430adwshDE6XBeV3-0
+*/
+
+body{
+    font-family: 'Righteous', sans-serif;
+}
+
+h1,h2,h3{
+    font-family: 'Righteous', sans-serif;
+}
+
+p {
+    font-family: 'Righteous', sans-serif;
+}
+
+/* whole page */
+.container{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* background as a phone */
+.phone_background {
+    width: 393px;
+    height: 853px;
+    background: #8e9aa8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* for search bar */
+.top_bar img{
+    margin-top: 15px;
+    margin-left:15px;
+    width: 40px;
+}
+
+/* for weather info such as location, date, weather logo, temperature and stuff */
+.weather {
+    transform: translateY(16%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather h1{
+    font-family: 'Righteous';
+    font-size: 5em;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.weather p{
+    text-align: center;
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.weather img{
+    width: 130px;
+}
+
+/* for plan container */
+.main_page_content {
+    transform: translate(6%, 16%);
+    width: 90%;
+    background: #638a7e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 420px;
+}
+
+.main_page_content .nav_bar{
+    transform: translateY(20%);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.main_page_content .nav_btn{
+    margin-top: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.main_page_content .nav_btn .left_btn {
+    font-family: 'Righteous', sans-serif;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 80px;
+    flex:1
+}
+
+.main_page_content .nav_btn .right_btn {
+    font-family: 'Righteous', sans-serif;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: right;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 80px;
+    flex:1
+}
+
+.main_page_content .nav_bar h3 {
+    font-size: 1.3em;
+    color: #f3e4cd;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: center;
+    flex:1
+}
+
+.main_page_content .recommend {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex: 15;
+    overflow: auto;
+    height: 180px;
+}
+
+.main_page_content .recommend::-webkit-scrollbar{
+    display: none;
+}
+
+.main_page_content .card {
+    width: 300px;
+    background: #afbc8f;
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    margin-bottom: 6%;
+    padding: 10px;
+}
+
+.main_page_content .card .icon img{
+    flex: 1;
+    max-width: 60px;  
+    height: auto; 
+}
+
+.main_page_content .card .text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 2;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.main_page_content .card .text h3{
+    color: #638a7e;
+    font-size: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main_page_content .card .text p{
+    color: #638a7e;
+    font-size: 0.8em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.main_page_content .send_text {
+    width: 300px;
+    background: #e2a67d;
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    margin: 15px;
+    flex-direction: row;
+}
+
+.main_page_content .send_text p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 1;
+}
+
+/* selection for people to send messages */
+.main_page_content .send_text .people select{
+    font-family: 'Righteous', sans-serif;
+    padding: 5px;
+    color: #ffffff;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    font-size: large;
+}
+
+.weather-side {
+    transform: translateY(16%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-side h1{
+    font-family: 'Righteous';
+    font-size: 5em;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.weather-side p{
+    text-align: center;
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.weather-side .img-collection{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    padding: 10px;
+}
+.weather-side .img-collection img{
+    flex:1;
+    max-width: 40px;
+    padding: 5px;
+}
+
+
+/* for plan container */
+.today_page_content {
+    transform: translate(6%, 6%);
+    width: 90%;
+    background: #638a7e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+}
+
+.today_page_content .nav_bar{
+    height: 30px;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.today_page_content .nav_btn{
+    transform: translateX(-150%);
+    margin-top: 20px;
+    height: 10px;
+    display: flex;
+    align-items: left;
+    flex: 1;
+}
+
+.today_page_content .nav_btn .left_btn {
+    font-family: 'Righteous', sans-serif;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    flex:1
+}
+
+
+.today_page_content .nav_bar h3 {
+    font-size: 1.3em;
+    color: #f3e4cd;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: center;
+    flex:1
+}
+
+.today_page_content .summary {
+    transform: translateY(10px);
+    width: 300px;
+    background: #afbc8f;
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    margin-bottom: 6%;
+    padding: 10px;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.today_page_content .summary h3{
+    color: #638a7e;
+    font-size: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.today_page_content .summary .all-cards{
+    display: flex;
+    overflow: auto;
+    margin-top: 5px;
+}
+
+.today_page_content .summary .all-cards .card{
+    width: 60px;
+}
+
+.today_page_content .summary .all-cards .card p{
+    color: #638a7e;
+    font-size: xx-small;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.today_page_content .summary .all-cards .card img{
+    color: #638a7e;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 40px;
+    padding: 5px;
+}
+
+.today_page_content .summary::-webkit-scrollbar{
+    display: none;
+}
+
+.today_page_content .add_schedule_blk{
+    height: 30px;
+    display: flex;
+}
+
+.today_page_content .add_schedule_btn .add_btn{
+    font-family: 'Righteous', sans-serif;
+    background-color: #e2a67d;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.today_page_content .add_schedule_blk p{
+    font-size: 1.3em;
+    color: #f3e4cd;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: center;
+    flex:1;
+    background: transparent;
+    padding: 5px;
+}
+
+.today_page_content .add_schedule_btn{
+    transform: translate(110%, -70%);
+}
+
+.today_page_content .schedule_blk{
+    transform: translateY(-10px);
+    height: 400px;
+    overflow: auto;
+    display: flex;
+    align-items: top;
+}
+
+.today_page_content .schedule_blk .timeline {
+    transform: translate(-20px, -25px);
+}
+
+.today_page_content .schedule_blk .timeline ul {
+    list-style-type: none;
+}
+
+.today_page_content .schedule_blk .timeline ul li{
+    height: 60px;
+    line-height: 60px;
+    color: #afbc8f;
+}
+
+.today_page_content .schedule_blk .timeline_table {
+    transform: translate(-10px, 20px);
+}
+
+.today_page_content .schedule_blk .timeline_table .timeline_table_style {
+    border-collapse: collapse;
+}
+
+.today_page_content .schedule_blk .timeline_table .timeline_table_style tr{
+    height: 60px;
+    text-align: center;
+    border-top: 2px solid #afbc8f;
+    border-bottom: 2px solid #afbc8f;
+}
+
+.today_page_content .schedule_blk .timeline_table .timeline_table_style td{
+    width: 120px;
+    align-items: center;
+}
+
+.today_page_content .schedule_blk .timeline_table .timeline_table_style td img{
+    max-height:40px;
+    width:40px;
+}
+
+.today_page_content .schedule_blk .timeline_table .card-out{
+    background: #ebd79c;
+    height: 47px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.today_page_content .schedule_blk .timeline_table .card-in{
+    background: #76c9cb;
+    height: 47px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.today_page_content .schedule_blk .timeline_table .card-in h3{
+    font-size: 1em;
+    color: #638a7e;
+    margin-top: 10px;
+    margin-bottom: 0px; 
+    text-align: left;
+    flex:1;
+}
+
+.today_page_content .schedule_blk .timeline_table .card-out h3{
+    font-size: 1em;
+    color: #638a7e;
+    margin-top: 10px;
+    margin-bottom: 0px; 
+    text-align: left;
+    flex:1;
+}
+
+
+.today_page_content .schedule_blk .timeline_table .card-out p{
+    font-size: 0.6em;
+    color: #638a7e;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: left;
+    flex:1;
+}
+
+.today_page_content .schedule_blk .timeline_table .card-in p{
+    font-size: 0.6em;
+    color: #638a7e;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: left;
+    flex:1;
+}
+
+.today_page_content .schedule_blk::-webkit-scrollbar{
+    display: none;
+}
+
+/* for plan container */
+.travel_page_content {
+    transform: translate(6%, 6%);
+    width: 90%;
+    background: #638a7e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+}
+
+
+.travel_page_content .nav_bar{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.travel_page_content .nav_btn{
+    margin-top: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.travel_page_content .nav_btn .left_btn {
+    font-family: 'Righteous', sans-serif;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 160px;
+    flex:1
+}
+
+
+.travel_page_content .nav_btn .add_btn{
+    font-family: 'Righteous', sans-serif;
+    background-color: #e2a67d;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    text-align: right;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.travel_page_content .nav_bar h3 {
+    font-size: 1.3em;
+    color: #f3e4cd;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: center;
+    flex:2
+}
+
+.travel_page_content .summary {
+    transform: translateY(10px);
+    width: 300px;
+    background: #afbc8f;
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    margin-bottom: 6%;
+    padding: 10px;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.travel_page_content .summary h3{
+    color: #638a7e;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.travel_page_content .summary .all-cards{
+    display: flex;
+    overflow: auto;
+    margin-top: 5px;
+}
+
+.travel_page_content .summary .all-cards .card{
+    width: 60px;
+}
+
+.travel_page_content .summary .all-cards .card p{
+    color: #638a7e;
+    font-size: xx-small;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.travel_page_content .summary .all-cards .card img{
+    color: #638a7e;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 40px;
+    padding: 5px;
+}
+
+.travel_page_content .summary::-webkit-scrollbar{
+    display: none;
+}
+
+
+.travel_page_content .add_schedule_blk{
+    height: 30px;
+    display: flex;
+}
+
+.travel_page_content .schedule_blk{
+    height: 400px;
+    width:300px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.travel_page_content .schedule_blk::-webkit-scrollbar{
+    display: none;
+}
+
+
+.travel_page_content .schedule-table tr{
+    height: 90px;
+}
+
+.travel_page_content .schedule-table .border{
+    border: 1px white;
+}
+
+.travel_page_content .schedule_blk .schedule-table .card-hot{
+    background:#cc7161;
+    height: 67px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel_page_content .schedule_blk .schedule-table .card-cold{
+    background:#6fa5c3;
+    height: 67px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel_page_content .schedule_blk .schedule-table .card-mild{
+    background: #e2a67d;
+    height: 67px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel_page_content .schedule_blk .schedule-table p{
+    font-size: 0.8em;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: left;
+    flex:1;
+}
+
+.travel_page_content .schedule_blk .schedule-table h3{
+    font-size: 1em;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    text-align: left;
+    flex:1;
+}
+
+.travel_page_content .schedule_blk .schedule-table img{
+    width:20px;
+}
+
+
+.travel_page_content .schedule_blk .schedule-table .weather{
+    display: flex;
+    flex-direction: row;
+}
+
+.travel_page_content .schedule_blk .schedule-table .table-style {
+    border-collapse: collapse;
+}
+
+.travel_page_content .schedule_blk .schedule-table .table-style tr {
+    border-top: 2px solid #afbc8f;
+    border-bottom:  2px solid #afbc8f;
+}
+
+.travel_page_content .schedule_blk .schedule-table .table-style td {
+    padding: 5px;
+    color: #afbc8f;
+}
+
+.travel_page_content .schedule_blk .schedule-table .wide{
+    width:130px;
+}
